@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "xo",
+    "plugin:xo/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "xo"
+  ]
+}

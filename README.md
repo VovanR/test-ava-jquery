@@ -16,7 +16,7 @@ npm run build
 ```
 npm start
 ```
-Open [localhost:8080/webpack-dev-server](http://localhost:8080/webpack-dev-server/)
+Open [localhost:8080/webpack-dev-server/example/](http://localhost:8080/webpack-dev-server/example/)
 
 ## Test
 ```

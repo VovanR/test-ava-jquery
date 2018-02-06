@@ -2,27 +2,19 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const args = require('minimist')(process.argv.slice(2));
 
 const srcPath = path.join(__dirname, 'src');
-
-// env: 'dev', 'dist'
-let env;
-if (args.env) {
-	env = args.env;
-} else {
-	env = 'dev';
-}
+const env = process.env.NODE_ENV
 
 // Default plugins
 let plugins = [
 ];
 
-if (env === 'dev') {
+if (env === 'development') {
 	// Development plugins
 	plugins = plugins.concat([
 	]);
-} else if (env === 'dist') {
+} else if (env === 'production') {
 	// Dist plugins
 	plugins = plugins.concat([
 		new webpack.optimize.DedupePlugin(),

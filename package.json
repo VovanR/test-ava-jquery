@@ -2,8 +2,8 @@
   "name": "test-ava-jquery",
   "description": "My AVA jQuery playground",
   "scripts": {
-    "build": "webpack --env=dist",
-    "build:dev": "webpack --env=dev",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack",
     "start": "webpack-dev-server",
     "test": "ava test/test-*.js",
     "tdd": "ava test/test-*.js --watch"
@@ -18,13 +18,13 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
+    "cross-env": "^5.1.3",
     "eslint": "^3.9.1",
     "eslint-config-xo": "^0.17.0",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-xo": "^1.0.0",
     "jsdom": "^9.8.3",
-    "minimist": "^1.2.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },
